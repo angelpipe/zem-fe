@@ -1,27 +1,12 @@
 # Zemoga FE Challenge
 
 ## Folder Structure
-
 .
-├── api (Folder to expose the /api route on the server, used for json)
-│   └── index.js
-│
-├── bin (Folder that stores app executable)
-│   └── www
-│
-├── data (Folder to store JSON data)
-│   └── rulings.json   
-│ 
-├── public (HTML and compiled sources)
-│   ├── images
-│   ├── js
-│   ├── styles
-│   └── index.html (main page)
-│
-├── src (CSS and js source code, HERE'S THE PLACE TO LOOK AT)
-│   ├── js
-│   └── scss
-│
+├── api                   # Folder to expose the /api route on the server, used for json
+├── bin                   # Folder that stores app executable
+├── data                  # Folder to store JSON data which is server through the app as an API
+├── public                # HTML and compiled sources
+├── src                   # CSS and js source code, HERE'S THE PLACE TO LOOK AT
 ├── package.json
 └── README.md
 
