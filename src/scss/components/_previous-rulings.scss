@@ -1,0 +1,130 @@
+.previous-rulings {
+  @extend %container;
+
+  margin-top: 42px;
+  padding: 0 20px;
+
+  &__title {
+    @extend %font-light;
+    @include font-size(40px, 48px);
+
+    margin-bottom: 48px;
+  }
+
+  .ruling {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 20px;
+
+    &__content {
+      background: linear-gradient($gray-0, $gray-8);
+      color: $white;
+      padding: 236px 22px 30px 38px;
+    }
+
+    &__title {
+      @extend %font-regular;
+      @include font-size(45px, 48px);
+    }
+
+    &__summary {
+      @extend %font-light;
+      @include font-size(16px, 20px);
+    }
+
+    &__info-link {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    &__link {
+      @include font-size(14px, 24px);
+
+      border: 1px solid $white;
+      display: block;
+      padding: 8px 24px;
+    }
+
+    &__ended,
+    &__section {
+      @include font-size(12px, 14px);
+
+      text-align: right;
+    }
+
+    &__ended {
+      @extend %font-bold;
+    }
+  }
+
+  .reputation-bar {
+    display: flex;
+    justify-content: start;
+
+    &__positive,
+    &__negative {
+      @extend %font-light;
+      @include font-size(30px, 34px);
+
+      color: $white;
+      height: 43px;
+      position: relative;
+    }
+
+    &__positive {
+      background-color: $aqua-7;
+      padding: 5px 0 0 42px;
+    }
+
+    &__negative {
+      background-color: $orange-7;
+      padding: 5px 42px 0 0;
+      text-align: right;
+    }
+
+    &__up,
+    &__down{
+      position: absolute;
+      top: 6px;
+      width: 28px;
+    }
+
+    &__up {
+      left: 10px;
+    }
+
+    &__down {
+      right: 10px;
+    }
+
+    @for $i from 1 through 100{
+      .p-#{$i}{
+        width: round(percentage($i/100));
+      }
+    }
+  }
+
+  @include from(tablet) {
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-gap: 22px;
+    }
+
+    .ruling {
+      grid-column-end: span 5;
+      margin-bottom: 0;
+
+      &__content {
+        margin-top: 86px;
+      }
+    }
+  }
+
+  @include from(desktop) {
+    padding: 0;
+  }
+}

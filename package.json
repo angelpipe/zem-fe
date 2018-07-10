@@ -1,0 +1,30 @@
+{
+  "name": "ZemogaFE",
+  "description": "Front End exercise for Zemoga",
+  "version": "0.0.1",
+  "authors": [
+    "Felipe Angel <angelpipe@gmail.com>"
+  ],
+  "scripts": {
+    "start": "node ./bin/www",
+    "scss": "node-sass --output-style compressed src/scss/main.scss public/styles/styles.css",
+    "js": "babel src/js | uglifyjs -c -m -o public/js/app.js",
+    "fe-compile": "npm run scss && npm run js"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "dependencies": {
+    "express": "~4.2.0",
+    "morgan": "~1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "node-sass": "^4.5.2",
+    "sass-rem": "^2.0.0",
+    "uglify-js": "^3.4.3"
+  }
+}

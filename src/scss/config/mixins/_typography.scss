@@ -1,0 +1,13 @@
+@mixin font-size($size: '16px', $line: $size, $letter-spacing: false) {
+  font-size: rem($size);
+  line-height: rem($line);
+  @if($letter-spacing) {
+    letter-spacing: rem($letter-spacing);
+  }
+}
+
+// sass-lint:disable no-vendor-prefixes
+@mixin text-antialias {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}

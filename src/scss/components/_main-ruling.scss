@@ -1,0 +1,122 @@
+.main-ruling {
+  background: no-repeat top left/cover url(../images/pope.jpg);
+
+  &__container {
+    @extend %container;
+
+    padding: 20px;
+  }
+
+  &__box {
+    background-color: $gray-5;
+  }
+
+  &__box-inner {
+    color: $white;
+    padding: 40px 34px 34px;
+  }
+
+  &__pre {
+    @extend %font-light;
+    @include font-size(16px, 19px);
+  }
+
+  &__title {
+    @extend %font-regular;
+    @include font-size(60px, 60px);
+  }
+
+  &__paragraph {
+    @extend %font-light;
+    @include font-size(21px, 24px);
+  }
+
+  &__more-link {
+    @extend %font-light;
+    @include font-size(14px, 24px);
+
+    text-decoration: underline;
+  }
+
+  &__verdict {
+    @extend %font-bold;
+    @include font-size(20px, 24px);
+
+    margin-top: 45px;
+  }
+
+  .voting {
+    display: flex;
+
+    .vote {
+      cursor: pointer;
+      flex-grow: 1;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    &__up{
+      background-color: $aqua-7;
+
+      &:hover {
+        background-color: $aqua-8;
+      }
+    }
+
+    &__down{
+      background-color: $orange-7;
+
+      &:hover {
+        background-color: $orange-8;
+      }
+    }
+  }
+
+  &__close-info {
+    display: flex;
+    margin-top: 70px;
+  }
+
+  &__closing-title {
+    @include font-size(13px, 20px);
+
+    background-color: $mediumGray-3;
+    color: $white;
+    flex-grow: 1;
+    padding: 16px 10px 0 0;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  &__closing-time {
+    @extend %font-light;
+    @include font-size(36px, 49px);
+
+    background-color: $white-7;
+    flex-grow: 2;
+    text-align: left;
+  }
+
+  &__closing-number {
+    @extend %font-regular;
+  }
+
+  @include from(tablet) {
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-gap: 22px;
+      padding: 170px 20px 0;
+    }
+
+    &__box {
+      grid-column: 1 / 6;
+    }
+  }
+
+  @include from(desktop) {
+    &__container {
+      padding: 170px 0 0;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.add-name {
+  @extend %container;
+
+  align-items: center;
+  background-color: $white-7;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding: 22px;
+  position: relative;
+
+  &__title {
+    @extend %font-light;
+    @include font-size(30px, 24px);
+  }
+
+  &__link {
+    display: block;
+    border: 3px solid $gray;
+    padding: 14px 38px;
+  }
+
+  &:before {
+    background: left top/cover url(../images/bg-add.jpg);
+    content: ' ';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}

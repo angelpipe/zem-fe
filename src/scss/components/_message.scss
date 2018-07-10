@@ -1,0 +1,33 @@
+.message {
+  @extend %container;
+
+  background-color: $lightGray;
+  display: flex;
+  margin-top: 32px;
+  padding: 22px;
+
+  &__main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__pre {
+    @extend %font-light;
+    @include font-size(22px, 26px);
+  }
+
+  &__title {
+    @extend %font-bold;
+    @include font-size(37px, 41px);
+  }
+
+  &__paragraph {
+    @extend %font-light;
+    @include font-size(15px, 22px);
+
+    flex: 3;
+    margin-left: 10px;
+  }
+}
